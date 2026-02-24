@@ -826,6 +826,57 @@
     }
 
     /* =============================================
+       TRAVEL CREW
+       ============================================= */
+    .crew-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .crew-member {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.7rem 0.85rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .crew-member:hover {
+      border-color: var(--accent-turquoise);
+      background: var(--bg-card-alt);
+    }
+
+    .crew-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .crew-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 600px) {
+      .crew-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* =============================================
        FOOTER
        ============================================= */
     .footer {
@@ -916,10 +967,40 @@
       </h1>
       <p class="hero-subtitle">A Comprehensive Travel Guide &amp; Hour-by-Hour Itinerary</p>
       <div class="hero-meta">
-        <span>📅 April 9–13, 2026</span>
+        <span>📅 April 9-13, 2026</span>
         <span>⏱ 5 Days, 4 Nights</span>
+        <span>👥 6 Travelers</span>
         <span>📍 Caraga, Mindanao</span>
       </div>
+
+      <!-- TRAVEL CREW -->
+      <div class="crew-grid">
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-turquoise-dim);color:var(--accent-turquoise)">JA</div>
+          <span class="crew-name">Jason</span>
+        </div>
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-coral-dim);color:var(--accent-coral)">CJ</div>
+          <span class="crew-name">Christyl Jade</span>
+        </div>
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-palm-dim);color:var(--accent-palm)">MJ</div>
+          <span class="crew-name">Mary Jhade</span>
+        </div>
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-sand-dim);color:var(--accent-sand)">JE</div>
+          <span class="crew-name">Jeshiela</span>
+        </div>
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-lagoon-dim);color:var(--accent-lagoon)">JU</div>
+          <span class="crew-name">Justice</span>
+        </div>
+        <div class="crew-member">
+          <div class="crew-avatar" style="background:var(--accent-sunset-dim);color:var(--accent-sunset)">HA</div>
+          <span class="crew-name">Harold</span>
+        </div>
+      </div>
+
       <blockquote class="hero-quote">
         "A land of raw nature, with breathtaking limestone cliffs, unbelievably clear turquoise waters, and unlimited adventures."
       </blockquote>
@@ -2512,7 +2593,7 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-title">Dinagat Islands — The Mystical Last Frontier</p>
-      <p>This guide was compiled for Jason's April 2026 Dinagat Islands expedition.</p>
+      <p>This guide was compiled for the crew's April 2026 Dinagat Islands expedition.</p>
       <p style="margin-top:0.5rem;font-size:0.75rem;">Rates, schedules, and availability are based on 2025 data and may change. Always verify before travel.</p>
     </div>
   </footer>
