@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itineraries</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #090e17;
+            --bg-card: #0f1923;
+            --bg-hover: #162030;
+            --border: #1c2e42;
+            --text-primary: #e4eaf0;
+            --text-secondary: #8a9db3;
+            --text-muted: #556880;
+            --accent-gold: #d4a44c;
+            --accent-turquoise: #22d3ee;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 15px;
+        }
+
+        @media (min-width: 640px) {
+            html {
+                font-size: 17px;
+            }
+        }
+
+        body {
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: 'Source Sans 3', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem;
+        }
+
+        .wrap {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-icon {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+
+        .trips {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .trip-card {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.15s, border-color 0.15s, transform 0.15s;
+            text-align: left;
+        }
+
+        .trip-card:hover {
+            background: var(--bg-hover);
+            transform: translateY(-2px);
+        }
+
+        .trip-card.mountain:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .trip-card.island:hover {
+            border-color: var(--accent-turquoise);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .card-icon.mountain {
+            background: rgba(212, 164, 76, 0.1);
+        }
+
+        .card-icon.island {
+            background: rgba(34, 211, 238, 0.1);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .card-arrow {
+            margin-left: auto;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            transition: transform 0.15s;
+        }
+
+        .trip-card:hover .card-arrow {
+            transform: translateX(3px);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="hero-icon">&#x1F30F;</div>
+        <h1>Travel Itineraries</h1>
+        <div class="subtitle">Jason's Adventure Plans</div>
+
+        <div class="trips">
+            <a href="https://pulag.jasonalmine.dev" class="trip-card mountain">
+                <div class="card-icon mountain">&#9968;&#65039;</div>
+                <div>
+                    <div class="card-title">Mt. Pulag Akiki Trail</div>
+                    <div class="card-meta">March 4-6, 2026 &middot; 3 days &middot; Benguet</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+
+            <a href="/dinagat" class="trip-card island">
+                <div class="card-icon island">&#127965;</div>
+                <div>
+                    <div class="card-title">Dinagat Islands</div>
+                    <div class="card-meta">April 9-13, 2026 &middot; 5 days &middot; Caraga, Mindanao</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+        </div>
+
+        <div class="footer">Compiled by Jason Almine</div>
+    </div>
+</body>
+
+</html>
