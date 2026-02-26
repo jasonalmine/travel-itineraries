@@ -1,0 +1,675 @@
+/* =============================================
+   DINAGAT ISLANDS — PAGE MODULE CSS
+   ============================================= */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+}
+
+/* =============================================
+   HERO EXTENSIONS (quote + intro + crew)
+   ============================================= */
+.heroQuote {
+  max-width: 620px;
+  margin: 1.5rem auto 1rem;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--accent-turquoise);
+  background: var(--accent-turquoise-dim);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.heroIntro {
+  max-width: 680px;
+  margin: 1.2rem auto 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.75;
+}
+
+/* =============================================
+   CREW GRID
+   ============================================= */
+.crewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .crewGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.crewMember {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.crewMember:hover {
+  border-color: var(--accent-turquoise);
+  background: var(--bg-card-alt);
+}
+
+.crewAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.crewName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* =============================================
+   PAGE CONTENT WRAPPER
+   ============================================= */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .content {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* =============================================
+   TWO-COLUMN LAYOUT
+   ============================================= */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .twoCol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================
+   BADGES (inline status/wifi/tier)
+   ============================================= */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+}
+
+.badgeTurquoise {
+  background: var(--accent-turquoise-dim);
+  color: var(--accent-turquoise);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.badgePalm {
+  background: var(--accent-palm-dim);
+  color: var(--accent-palm);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badgeLagoon {
+  background: var(--accent-lagoon-dim);
+  color: var(--accent-lagoon);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.badgeSand {
+  background: var(--accent-sand-dim);
+  color: var(--accent-sand);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.badgeCoral {
+  background: var(--accent-coral-dim);
+  color: var(--accent-coral);
+  border: 1px solid rgba(251, 113, 133, 0.2);
+}
+
+.badgeSunset {
+  background: var(--accent-sunset-dim);
+  color: var(--accent-sunset);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+/* =============================================
+   TABLES
+   ============================================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table thead th {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.table td {
+  padding: 0.6rem 0.9rem;
+  vertical-align: top;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.table td:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Itinerary table overrides */
+.itineraryTable td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  width: 7rem;
+  font-weight: 400;
+}
+
+.itineraryTable td:nth-child(2) {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.itineraryTable td:nth-child(3) {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Budget total row */
+.budgetTotal td {
+  font-weight: 700;
+  color: var(--accent-sand) !important;
+  font-size: 0.95rem;
+  border-top: 2px solid var(--border) !important;
+  padding-top: 0.85rem !important;
+}
+
+/* Budget flights row */
+.budgetBooked {
+  color: var(--accent-palm) !important;
+}
+
+/* Photo rank column */
+.photoRank {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-sand) !important;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.monoCell {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+}
+
+/* Contacts table: name column */
+.contactsTable td:first-child {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* =============================================
+   ACCOMMODATION LOCATION LABEL
+   ============================================= */
+.accomLocation {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   TOURIST SPOTS GRID
+   ============================================= */
+.spotsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 560px) {
+  .spotsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 760px) {
+  .spotsGrid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.spotCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.spotCard:hover {
+  background: var(--bg-card-alt);
+  border-color: var(--accent-turquoise);
+  transform: translateY(-1px);
+}
+
+.spotNum {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+
+.spotName {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+  line-height: 1.3;
+}
+
+.spotLocation {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--accent-turquoise);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.spotDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.spotTip {
+  font-size: 0.75rem;
+  color: var(--accent-sand);
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.35rem;
+  align-items: flex-start;
+}
+
+/* =============================================
+   TIER LABELS
+   ============================================= */
+.tierLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.tier1 {
+  background: var(--accent-sand-dim);
+  color: var(--accent-sand);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.tier2 {
+  background: var(--accent-lagoon-dim);
+  color: var(--accent-lagoon);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.tierIslands {
+  background: var(--accent-turquoise-dim);
+  color: var(--accent-turquoise);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.tierCultural {
+  background: var(--accent-orchid-dim);
+  color: var(--accent-orchid);
+  border: 1px solid rgba(192, 132, 252, 0.2);
+}
+
+.tierHidden {
+  background: var(--accent-palm-dim);
+  color: var(--accent-palm);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+/* =============================================
+   PACKING GRID
+   ============================================= */
+.packingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .packingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.packingCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem;
+}
+
+.packingCategory {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.packingList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.packingList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  line-height: 1.45;
+}
+
+.packingList li:last-child {
+  border-bottom: none;
+}
+
+.packingList li::before {
+  content: "✓";
+  color: var(--accent-palm);
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* =============================================
+   CAMERA SETTINGS GRID
+   ============================================= */
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 560px) {
+  .settingsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.settingItem {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+}
+
+.settingLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-turquoise);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.settingValue {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* =============================================
+   TIPS LIST
+   ============================================= */
+.tipsList {
+  counter-reset: tips;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tipsList li {
+  display: flex;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  counter-increment: tips;
+  transition: background 0.2s;
+}
+
+.tipsList li:hover {
+  background: var(--bg-card-alt);
+}
+
+.tipsList li::before {
+  content: counter(tips, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-turquoise);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* =============================================
+   CIRCUIT CARDS
+   ============================================= */
+.circuitCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.circuitDay {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.circuitDay2 {
+  color: var(--accent-lagoon);
+}
+
+.circuitDay3 {
+  color: var(--accent-sand);
+}
+
+.circuitDay4 {
+  color: var(--accent-sunset);
+}
+
+.circuitTitle {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.circuitRoute {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.routeStop {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+.routeArrow {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   CONNECTIVITY HELPERS
+   ============================================= */
+.textPalm {
+  color: var(--accent-palm);
+}
+
+.textSand {
+  color: var(--accent-sand);
+}
+
+.textSunset {
+  color: var(--accent-sunset);
+}
+
+.textCoral {
+  color: var(--accent-coral);
+}
+
+.textTurquoise {
+  color: var(--accent-turquoise);
+}
+
+.textOrchid {
+  color: var(--accent-orchid);
+}
+
+/* =============================================
+   SPACING HELPERS
+   ============================================= */
+.mb1 { margin-bottom: 0.5rem; }
+.mb2 { margin-bottom: 1rem; }
+.mb3 { margin-bottom: 1.5rem; }
+.mt1 { margin-top: 0.5rem; }
+.mt2 { margin-top: 1rem; }
+.mt3 { margin-top: 1.5rem; }
+
+/* =============================================
+   SUBSECTION TITLE
+   ============================================= */
+.subsectionTitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* =============================================
+   GETTING THERE — CARD OVERRIDE
+   ============================================= */
+.orchidCard {
+  border-left: 3px solid var(--accent-orchid);
+  margin-top: 1.5rem;
+}
+
+/* =============================================
+   PHOTO TABLE CENTER HEADER
+   ============================================= */
+.centerHeader {
+  text-align: center;
+}

@@ -1,0 +1,51 @@
+.callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-primary);
+  background: var(--bg-card-alt);
+  margin: 1rem 0;
+}
+
+.callout.tip {
+  border-left-color: var(--accent-primary);
+}
+
+.callout.warning {
+  border-left-color: #f97316;
+}
+
+.callout.info {
+  border-left-color: var(--accent-tertiary);
+}
+
+.callout.success {
+  border-left-color: var(--accent-secondary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.body {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.body p {
+  margin-bottom: 0.4rem;
+}

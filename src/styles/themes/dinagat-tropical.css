@@ -1,0 +1,37 @@
+/* Tropical Dark Theme: Dinagat Islands */
+[data-theme="dinagat-tropical"] {
+  --bg-deep: #071520;
+  --bg-card: #0c2233;
+  --bg-card-alt: #0e2a3d;
+  --bg-elevated: #12354d;
+  --bg-hover: #163d58;
+  --border: #1a4565;
+  --border-subtle: #133550;
+  --text-primary: #e8f4f8;
+  --text-secondary: #8bb8cc;
+  --text-muted: #5a8fa8;
+  --text-dim: #3d6e88;
+
+  --accent-primary: #22d3ee;
+  --accent-primary-dim: rgba(34, 211, 238, 0.1);
+  --accent-secondary: #34d399;
+  --accent-secondary-dim: rgba(52, 211, 153, 0.1);
+  --accent-tertiary: #38bdf8;
+  --accent-tertiary-dim: rgba(56, 189, 248, 0.1);
+
+  /* Page-specific named accents */
+  --accent-turquoise: #22d3ee;
+  --accent-turquoise-dim: rgba(34, 211, 238, 0.1);
+  --accent-sand: #fbbf24;
+  --accent-sand-dim: rgba(251, 191, 36, 0.1);
+  --accent-coral: #fb7185;
+  --accent-coral-dim: rgba(251, 113, 133, 0.1);
+  --accent-palm: #34d399;
+  --accent-palm-dim: rgba(52, 211, 153, 0.1);
+  --accent-lagoon: #38bdf8;
+  --accent-lagoon-dim: rgba(56, 189, 248, 0.1);
+  --accent-sunset: #fb923c;
+  --accent-sunset-dim: rgba(251, 146, 60, 0.1);
+  --accent-orchid: #c084fc;
+  --accent-orchid-dim: rgba(192, 132, 252, 0.1);
+}

@@ -1,0 +1,52 @@
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  min-height: 44px;
+}
+
+.icon {
+  font-size: 0.95rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  padding: 0 0.15rem;
+}
+
+.arrow {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}

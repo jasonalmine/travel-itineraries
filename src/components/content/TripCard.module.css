@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  text-align: left;
+  min-height: 44px;
+}
+
+.card:hover {
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.card.mountain:hover {
+  border-color: #d4a44c;
+}
+
+.card.island:hover {
+  border-color: #22d3ee;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.icon.mountain {
+  background: rgba(212, 164, 76, 0.1);
+}
+
+.icon.island {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+
+.card:hover .arrow {
+  transform: translateX(3px);
+}

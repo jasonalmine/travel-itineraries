@@ -1,0 +1,440 @@
+/* ============================================================
+   Mt. Pulag Travel Itinerary — Page-Specific Styles
+   ============================================================ */
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem 5rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding: 0 2rem 4rem;
+  }
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ---- Hero Extras ---- */
+.heroQuote {
+  max-width: 620px;
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--accent-summit);
+  background: var(--accent-summit-dim);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+.heroIntro {
+  max-width: 680px;
+  margin: 1rem auto 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  text-align: left;
+  line-height: 1.75;
+  padding: 0 0.5rem;
+}
+
+/* ---- Route Flow (custom pill style) ---- */
+.routeFlow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 1.25rem auto 0;
+  max-width: 620px;
+}
+
+.routeNode {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  white-space: nowrap;
+}
+
+.routeNodeHighlight {
+  border-color: var(--accent-summit);
+  color: var(--accent-summit);
+  background: var(--accent-summit-dim);
+}
+
+.routeConnector {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* ---- Temperature Compare ---- */
+.tempCompare {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.tempCard {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tempHot {
+  background: var(--accent-campfire-dim);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.tempCold {
+  background: var(--accent-frost-dim);
+  border: 1px solid rgba(103, 184, 227, 0.2);
+}
+
+.tempValue {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.tempHot .tempValue {
+  color: var(--accent-campfire);
+}
+
+.tempCold .tempValue {
+  color: var(--accent-frost);
+}
+
+.tempLocation {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ---- Elevation Bar ---- */
+.elevationBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  background: linear-gradient(90deg, var(--accent-pine-dim) 0%, var(--accent-summit-dim) 100%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.elevationValue {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-summit);
+  white-space: nowrap;
+}
+
+.elevationLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.elevationDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ---- Flight Cards ---- */
+.flightGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 560px) {
+  .flightGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.flightCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.flightLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.flightRoute {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.flightDetail {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ---- Phase Labels ---- */
+.phaseLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.5rem 0 0.6rem;
+  font-weight: 600;
+}
+
+/* ---- Standard table styles within page ---- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table thead th {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.table td {
+  padding: 0.6rem 0.9rem;
+  vertical-align: top;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.table td:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Itinerary table: mono time column */
+.itinerary td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  width: 8rem;
+}
+
+.itinerary td:nth-child(2) {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* Recommended bus row */
+.busRecommended {
+  background: var(--accent-summit-dim) !important;
+  border-left: 3px solid var(--accent-summit);
+}
+
+.busRecommended td {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Budget total row */
+.budgetTotal td {
+  font-weight: 700 !important;
+  color: var(--accent-summit) !important;
+  font-size: 0.95rem;
+  border-top: 2px solid var(--border) !important;
+  padding-top: 0.85rem !important;
+}
+
+/* ---- Meeting Points table ---- */
+.meetingTable td:first-child {
+  white-space: nowrap;
+}
+
+/* ---- Accommodation Card ---- */
+.accomCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  border-left: 3px solid var(--accent-ridge);
+  margin: 1.25rem 0;
+}
+
+.accomLocation {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-ridge);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.accomName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Risks ---- */
+.riskGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---- Checklist ---- */
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: background 0.2s;
+  line-height: 1.5;
+}
+
+.checklist li:hover {
+  background: var(--bg-card-alt);
+}
+
+.checkMark {
+  color: var(--accent-pine);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ---- Gear sections ---- */
+.gearDayBlock {
+  margin-top: 1.5rem;
+}
+
+.gearDayBlock + .gearDayBlock {
+  margin-top: 2rem;
+}
+
+.gearDayTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.gearDaySubtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.gearGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .gearGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gearDivider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0 0.5rem;
+}
+
+/* ---- Contacts ---- */
+.contactsTable td:first-child {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.contactsTable td:nth-child(2) {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ---- Utility ---- */
+.mt1 { margin-top: 0.75rem; }
+.mt2 { margin-top: 1.25rem; }
+.mb1 { margin-bottom: 0.75rem; }
+.mb2 { margin-bottom: 1.25rem; }
+.textMuted { color: var(--text-muted); }
+.textSecondary { color: var(--text-secondary); }
+.textSm { font-size: 0.85rem; }
+.textXs { font-size: 0.75rem; }

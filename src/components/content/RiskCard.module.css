@@ -1,0 +1,57 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge.high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.badge.medium {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+.badge.low {
+  background: rgba(34, 211, 238, 0.15);
+  color: #22d3ee;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.mitigation {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

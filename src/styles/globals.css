@@ -1,0 +1,141 @@
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
+  html { font-size: 17px; }
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* =============================================
+   SHARED CSS CUSTOM PROPERTIES (defaults)
+   ============================================= */
+:root {
+  --bg-deep: #0a0e14;
+  --bg-card: #12171f;
+  --bg-card-alt: #161c26;
+  --bg-elevated: #1c232e;
+  --bg-hover: #222a37;
+  --border: #2a3444;
+  --border-subtle: #1e2734;
+  --text-primary: #e8ecf2;
+  --text-secondary: #9aa8b8;
+  --text-muted: #5e7080;
+  --text-dim: #3f5060;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+
+  /* Generic accent variables: overridden per theme */
+  --accent-primary: #f59e0b;
+  --accent-primary-dim: rgba(245, 158, 11, 0.1);
+  --accent-secondary: #10b981;
+  --accent-secondary-dim: rgba(16, 185, 129, 0.1);
+  --accent-tertiary: #67b8e3;
+  --accent-tertiary-dim: rgba(103, 184, 227, 0.1);
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 600; }
+h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; }
+h4 { font-size: 1.05rem; font-weight: 600; }
+
+p { margin-bottom: 0.75rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--accent-tertiary); text-decoration: underline; }
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+}
+
+strong { font-weight: 600; color: var(--text-primary); }
+
+/* =============================================
+   STANDARDIZED BREAKPOINTS
+   480px  - small mobile
+   768px  - tablet / large mobile
+   1024px - desktop
+   ============================================= */
+
+/* =============================================
+   LAYOUT
+   ============================================= */
+.page-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .page-wrap {
+    padding: 0 2rem;
+  }
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+section + section {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* =============================================
+   SCROLLBAR
+   ============================================= */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* =============================================
+   SELECTION
+   ============================================= */
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-deep);
+}

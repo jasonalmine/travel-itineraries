@@ -1,0 +1,498 @@
+/* ============================================================
+   Mt. Pulag Hike Page — Specific Styles
+   ============================================================ */
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem 5rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding: 0 2rem 4rem;
+  }
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ---- Day Header ---- */
+.dayHeader {
+  margin: 3rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.dayHeader::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.dayHeader.day1::before { background: var(--accent-pine); }
+.dayHeader.day2::before { background: var(--accent-summit); }
+.dayHeader.day3::before { background: var(--accent-frost); }
+
+.dayLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.35rem;
+}
+
+.day1 .dayLabel { color: var(--accent-pine); }
+.day2 .dayLabel { color: var(--accent-summit); }
+.day3 .dayLabel { color: var(--accent-frost); }
+
+.dayTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 1.55rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.dayDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+/* ---- Segment Header ---- */
+.segmentHeader {
+  margin: 2rem 0 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.segmentNum {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.segTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.segStats {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+/* ---- Sub-section title ---- */
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.subsectionTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ---- Info Cards (Clothing / Camera) ---- */
+.infoCard {
+  margin: 1rem 0;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.infoCard.clothing {
+  background: rgba(103, 184, 227, 0.06);
+  border-color: rgba(103, 184, 227, 0.18);
+}
+
+.infoCard.camera {
+  background: rgba(245, 158, 11, 0.06);
+  border-color: rgba(245, 158, 11, 0.16);
+}
+
+.cardLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.infoCard.clothing .cardLabel { color: var(--accent-frost); }
+.infoCard.camera .cardLabel { color: var(--accent-summit); }
+
+.cardIntro {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0.5rem;
+}
+
+.cardList li {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.cardList li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.infoCard.clothing .cardList li::before { color: var(--accent-frost); }
+.infoCard.camera .cardList li::before { color: var(--accent-summit); }
+
+.cardSublabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.cardTip {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ---- Elevation Profile ---- */
+.elevProfile {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.elevProfileTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+
+.elevStops {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.elevStop {
+  display: grid;
+  grid-template-columns: 120px 44px 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 0.6rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+
+.elevStop:hover { background: var(--bg-hover); }
+
+.stopElev {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  text-align: right;
+  padding-right: 0.6rem;
+}
+
+.stopIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.stopInfo {
+  padding-left: 0.65rem;
+}
+
+.stopName {
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stopDetail {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.elevConnector {
+  margin-left: 142px;
+  width: 2px;
+  height: 16px;
+  background: var(--border);
+}
+
+.elevBar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-top: 5px;
+  max-width: 180px;
+}
+
+.elevBarFill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.killerNote .stopName {
+  color: var(--accent-ridge);
+}
+
+@media (max-width: 480px) {
+  .elevStop {
+    grid-template-columns: 90px 38px 1fr;
+  }
+  .elevConnector {
+    margin-left: 108px;
+  }
+}
+
+/* ---- Hike Tables ---- */
+.hikeTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.hikeTable thead th {
+  background: var(--bg-card-alt);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.hikeTable tbody td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.hikeTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hikeTable tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+/* Time column */
+.hikeTable tbody td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hikeTable tbody td strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Row highlight types */
+.rowHighlight td { background: rgba(245, 158, 11, 0.07); }
+.rowHighlight td:first-child { color: var(--accent-summit) !important; }
+
+.rowStart td { background: rgba(16, 185, 129, 0.07); }
+.rowStart td:first-child { color: var(--accent-pine) !important; }
+
+.rowArrive td { background: rgba(103, 184, 227, 0.07); }
+.rowArrive td:first-child { color: var(--accent-frost) !important; }
+
+.rowCamp td { background: rgba(167, 139, 250, 0.07); }
+.rowCamp td:first-child { color: var(--accent-trail) !important; }
+
+.rowSummit td { background: rgba(245, 158, 11, 0.1); }
+.rowSummit td:first-child { color: var(--accent-summit) !important; }
+
+/* ---- Trail Overview Table ---- */
+.overviewTable td:nth-child(2) {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 180px;
+}
+
+.killerCell {
+  color: var(--accent-ridge) !important;
+  font-weight: 700 !important;
+}
+
+/* ---- Summary Table ---- */
+.summaryTable thead th {
+  text-align: center;
+}
+
+.summaryTable thead th:first-child,
+.summaryTable thead th:nth-child(2) {
+  text-align: left;
+}
+
+.summaryTable tbody td {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
+.summaryTable tbody td:first-child,
+.summaryTable tbody td:nth-child(2) {
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+}
+
+.summaryTable .totalsRow td {
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border-top: 2px solid var(--accent-summit);
+}
+
+/* ---- Callout strips ---- */
+.calloutStrip {
+  margin: 1rem 0;
+  padding: 0.9rem 1.15rem;
+  border-left: 3px solid;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--bg-card);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.calloutStrip.gold { border-color: var(--accent-summit); }
+.calloutStrip.emerald { border-color: var(--accent-pine); }
+.calloutStrip.sky { border-color: var(--accent-frost); }
+.calloutStrip.rose { border-color: var(--accent-ridge); }
+
+.calloutStrip strong { color: var(--text-primary); }
+
+/* ---- Reminders Grid ---- */
+.reminders {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.reminderItem {
+  padding: 1rem 1.1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.reminderIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  background: var(--accent-summit-dim);
+}
+
+.reminderTitle {
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.reminderBody {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ---- Divider ---- */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 1.5rem 0;
+}

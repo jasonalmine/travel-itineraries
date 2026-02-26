@@ -1,0 +1,37 @@
+/* Alpine Hike Theme: Mt. Pulag Hike Itinerary */
+[data-theme="pulag-hike"] {
+  --bg-deep: #0a0e14;
+  --bg-card: #12171f;
+  --bg-card-alt: #161c26;
+  --bg-elevated: #1c232e;
+  --bg-hover: #222a37;
+  --border: #2a3444;
+  --border-subtle: #1e2734;
+  --text-primary: #e8ecf2;
+  --text-secondary: #9aa8b8;
+  --text-muted: #5e7080;
+  --text-dim: #3f5060;
+
+  --accent-primary: #f59e0b;
+  --accent-primary-dim: rgba(245, 158, 11, 0.1);
+  --accent-secondary: #10b981;
+  --accent-secondary-dim: rgba(16, 185, 129, 0.1);
+  --accent-tertiary: #38bdf8;
+  --accent-tertiary-dim: rgba(56, 189, 248, 0.1);
+
+  /* Page-specific named accents */
+  --accent-summit: #f59e0b;
+  --accent-summit-dim: rgba(245, 158, 11, 0.1);
+  --accent-pine: #10b981;
+  --accent-pine-dim: rgba(16, 185, 129, 0.1);
+  --accent-frost: #67b8e3;
+  --accent-frost-dim: rgba(103, 184, 227, 0.1);
+  --accent-campfire: #f97316;
+  --accent-campfire-dim: rgba(249, 115, 22, 0.1);
+  --accent-trail: #a78bfa;
+  --accent-trail-dim: rgba(167, 139, 250, 0.1);
+  --accent-ridge: #f472b6;
+  --accent-ridge-dim: rgba(244, 114, 182, 0.1);
+  --accent-stone: #94a3b8;
+  --accent-stone-dim: rgba(148, 163, 184, 0.1);
+}
