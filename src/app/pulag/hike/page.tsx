@@ -102,10 +102,10 @@ export default function PulagHikePage() {
           title="Mt. Pulag via Akiki Trail"
           subtitle="The hardest trail. The highest reward."
           badges={[
-            { label: "March 4–6, 2026" },
-            { label: "Akiki Trail" },
-            { label: "Summit: 2,926 m" },
-            { label: "3D2N" },
+            { icon: "📅", text: "March 4–6, 2026" },
+            { icon: "🥾", text: "Akiki Trail" },
+            { icon: "⛰️", text: "Summit: 2,926 m" },
+            { icon: "🏕️", text: "3D2N" },
           ]}
         />
 
