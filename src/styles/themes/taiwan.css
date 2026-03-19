@@ -1,0 +1,38 @@
+/* Taiwan Urban Mountain Theme */
+[data-theme="taiwan"] {
+  --bg-deep: #090d12;
+  --bg-card: #10161e;
+  --bg-card-alt: #141b24;
+  --bg-elevated: #1a2230;
+  --bg-hover: #1f2a3a;
+  --border: #263444;
+  --border-subtle: #1b2534;
+  --text-primary: #e6edf5;
+  --text-secondary: #8fa4ba;
+  --text-muted: #526070;
+  --text-dim: #344050;
+
+  --accent-primary: #00c9a7;
+  --accent-primary-dim: rgba(0, 201, 167, 0.1);
+  --accent-secondary: #f97316;
+  --accent-secondary-dim: rgba(249, 115, 22, 0.1);
+  --accent-tertiary: #38bdf8;
+  --accent-tertiary-dim: rgba(56, 189, 248, 0.1);
+
+  /* Page-specific named accents */
+  --accent-jade: #00c9a7;
+  --accent-jade-dim: rgba(0, 201, 167, 0.1);
+  --accent-lantern: #f97316;
+  --accent-lantern-dim: rgba(249, 115, 22, 0.1);
+  --accent-sky: #38bdf8;
+  --accent-sky-dim: rgba(56, 189, 248, 0.1);
+  --accent-blossom: #f472b6;
+  --accent-blossom-dim: rgba(244, 114, 182, 0.1);
+  --accent-tea: #84cc16;
+  --accent-tea-dim: rgba(132, 204, 22, 0.1);
+  --accent-stone: #94a3b8;
+  --accent-stone-dim: rgba(148, 163, 184, 0.1);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+}
