@@ -32,7 +32,6 @@ export const trips: Trip[] = [
     variant: "island",
     status: "upcoming",
   },
-  ,
   {
     href: "/taiwan",
     icon: "🇹🇼",
