@@ -27,6 +27,17 @@
   border-color: #22d3ee;
 }
 
+.card.past {
+  opacity: 0.6;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card.past:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 .icon {
   width: 56px;
   height: 56px;
@@ -46,9 +57,20 @@
   background: rgba(34, 211, 238, 0.1);
 }
 
+.pastIcon {
+  filter: grayscale(50%);
+}
+
 .content {
   flex: 1;
   min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .title {
@@ -56,7 +78,19 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.2rem;
+}
+
+.pastBadge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .meta {
