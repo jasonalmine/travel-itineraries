@@ -546,6 +546,21 @@ export const spotTiers: SpotTier[] = [
     ],
   },
   {
+    label: "Surfing & Water Sports",
+    icon: "🏄",
+    tierClass: "tier-2",
+    spots: [
+      {
+        num: "S1",
+        name: "Tagbirayan Beach",
+        location: "📍 Barangay San Jose, Cagdianao",
+        description:
+          "Dinagat's only recognised surf break — an emerging destination that has already hosted competitions (\"Harok sa Tagbi\"). Professional surfers have confirmed its potential. Wave season mirrors Siargao: best from late September to March. April can still deliver on good swell days. Check Surfline or Magicseaweed 3–4 days before your trip.",
+        tip: "🏄 Best checked via Surfline forecast before committing. Boards available for rent locally. Reef-safe sunscreen mandatory — this is a reef break. Great for beginners to intermediate on smaller swell days.",
+      },
+    ],
+  },
+  {
     label: "Hidden Gems & Secret Spots",
     icon: "🌊",
     tierClass: "tier-hidden",
@@ -699,19 +714,19 @@ export const days: DayData[] = [
       { time: "12:45 PM", activity: "🍱 Lunch on the beach", details: "Packed lunch in paradise." },
       { time: "1:30 PM", activity: "🏖️ STOP 6: Duyos Beach / Duyos Island", details: "The shifting sandbar. Walk the sandbar, photograph the minimalist seascape. 45 min." },
       { time: "2:15 PM", activity: "🏖️ STOP 7: Cabacongan Cove", details: "Secluded, powdery sand, crystal-clear waters surrounded by limestone. Cliff jumping for the adventurous. 45 min." },
-      { time: "3:00 PM", activity: "🏖️ STOP 8: Pagkawasan Beach", details: "Final beach stop. Rustic, unspoilt shoreline. Rest and recharge. 30 min." },
-      { time: "3:30 PM", activity: "🚤 Return voyage to San Jose", details: "~45 min. Golden afternoon light for last sea photos." },
-      { time: "4:15 PM", activity: "🏨 Return to accommodation", details: "Shower, rest, recharge." },
-      { time: "5:00 PM", activity: "🚶 Walk to Campintac Black Beach", details: "~15 min walk/ride. Dark volcanic sand with WWII history. Black sand contrast against turquoise water during golden hour is striking." },
-      { time: "6:00 PM", activity: "🌅 Sunset at the waterfront", details: "" },
-      { time: "6:30 PM", activity: "🍽️ Dinner", details: "Celebrate with a seafood feast. Try: grilled curacha (if available), sinuglaw, fresh shrimp." },
-      { time: "8:00 PM", activity: "🌙 Night photography / rest", details: "Another chance for astrophotography if skies are clear." },
+      { time: "3:00 PM", activity: "🏖️ STOP 8: Pagkawasan Beach", details: "Quick stop. Rustic, unspoilt shoreline. 20 min." },
+      { time: "3:30 PM", activity: "🚤 Head to Cagdianao", details: "~30 min boat ride to the eastern coast." },
+      { time: "4:00 PM", activity: "🏄 STOP 9: Tagbirayan Beach — SURFING", details: "Dinagat's only surf break. Hosted competitions, endorsed by professional surfers. Board rentals available on-site (~₱200–300/hr). Allow 2 hours. April can deliver waves on good swell days — check Surfline forecast 3–4 days before the trip. Beginners welcome on smaller days. Reef break — wear reef-safe sunscreen and water shoes." },
+      { time: "6:00 PM", activity: "🚤 Return voyage to San Jose", details: "~45 min. Golden light on the water for last sea photos." },
+      { time: "6:45 PM", activity: "🏨 Return to accommodation", details: "Shower, rest, recharge." },
+      { time: "7:15 PM", activity: "🍽️ Dinner", details: "Celebrate with a seafood feast. Try: grilled curacha (if available), sinuglaw, fresh shrimp." },
+      { time: "8:30 PM", activity: "🌙 Night photography / rest", details: "Another chance for astrophotography if skies are clear." },
     ],
     callout: {
       variant: "info",
-      icon: "🚤",
-      title: "Boat Cost Estimate",
-      body: "₱3,000–3,500 for full-day Basilisa Circuit (split among group of 4–8 passengers)",
+      icon: "🏄",
+      title: "Boat Cost + Surf",
+      body: "₱3,000–3,500 for full-day Basilisa Circuit + Tagbirayan (split among group of 4–8 passengers). Surfboard rental at Tagbirayan: ~₱200–300/hr per board. Check Surfline forecast 3–4 days before departure — April can still deliver on good swell days.",
     },
   },
   {
@@ -809,8 +824,9 @@ export const budgetRows: BudgetRow[] = [
   { item: "Local transport (tricycles, habal-habal)", cost: "₱500–800", notes: "Throughout trip" },
   { item: "Entrance fees", cost: "₱200–300", notes: "Various sites" },
   { item: "Food (5 days)", cost: "₱2,000–3,000", notes: "Local eateries" },
+  { item: "Surfboard rental — Tagbirayan (Day 3)", cost: "₱1,200–1,800", notes: "~₱200–300/hr per board, 2 hrs, 6 pax" },
   { item: "Guide tips & miscellaneous", cost: "₱500–1,000", notes: "" },
-  { item: "TOTAL ESTIMATE", cost: "₱13,600–20,100", notes: "~$240–355 USD", isTotal: true },
+  { item: "TOTAL ESTIMATE", cost: "₱14,800–21,900", notes: "~$260–385 USD", isTotal: true },
 ];
 
 // =============================================
@@ -846,8 +862,10 @@ export const packingCategories: PackingCategory[] = [
   {
     category: "Clothing",
     items: [
-      "Rash guard / swim shirt (UV protection)",
+      "Rash guard / swim shirt (UV protection) — essential for surfing",
       "Board shorts / quick-dry shorts",
+      "Water shoes / reef booties — Tagbirayan is a reef break",
+      "Surfboard wax (optional — rentals usually come waxed)",
       "Light long pants (for PBMA Shrine visit & habal-habal rides)",
       "Closed shoes (for shrine visit & mountain trek)",
       "Hat / cap",
@@ -912,6 +930,7 @@ export const tips: string[] = [
   "Mobile signal is unreliable. Download offline maps before you go. Smart/TNT network has slightly better coverage than Globe.",
   "April is peak dry season — perfect weather, calm seas, clear skies. Best time for island hopping and photography.",
   "Bring a positive attitude. Dinagat is remote, undeveloped, and beautifully raw. Embrace the slow pace. The roads are unpaved, the infrastructure is basic — but that's exactly the charm.",
+  "Check surf forecast before Day 3. Visit Surfline or Magicseaweed around April 5–7. Tagbirayan's peak season ends in March, but April can still deliver on good swell days. If the forecast is flat, use the time for an extra beach stop instead.",
   "Be environmentally responsible. This is an emerging ecotourism destination. Take nothing but photos, leave nothing but footprints. Use reef-safe sunscreen. Don't touch coral.",
   "Support local. Eat at local carinderias, hire local guides, stay at locally-owned homestays. Your tourism supports one of the Philippines' poorest provinces.",
 ];
@@ -950,6 +969,7 @@ export const circuits: CircuitData[] = [
       "Duyos Beach",
       "Cabacongan Cove",
       "Pagkawasan Beach",
+      "Tagbirayan Beach (Surfing)",
       "San Jose",
     ],
   },
