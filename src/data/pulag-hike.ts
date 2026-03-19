@@ -358,7 +358,7 @@ export const seg1CameraCard: InfoCard = {
     },
     {
       label: "Eddet River (1,265m)",
-      text: "Shoot the river itself before lunch. Water, rocks, pine forest backdrop. Also good for environmental portraits of your partner at the crossing.",
+      text: "Shoot the river itself before lunch. Water, rocks, pine forest backdrop. Also great for environmental portraits of a fellow trekker at the crossing.",
     },
   ],
 };
@@ -561,7 +561,7 @@ export const camp1CameraCard: InfoCard = {
           label: "",
           text: "The pine-covered slopes below catch warm orange light — shoot wide (28mm) for the landscape, zoom in (100–200mm) to compress ridgelines",
         },
-        { label: "", text: "Silhouette your partner against the golden sky on the ridge" },
+        { label: "", text: "Silhouette a trekker against the golden sky on the ridge" },
         { label: "", text: "Shoot the camp itself — tents in the foreground, Cordillera ridges behind" },
       ],
     },
@@ -751,7 +751,7 @@ export const seg4CameraCard: InfoCard = {
     },
     {
       label: "Fog and depth",
-      text: "If there's cloud in the forest (very likely in March), shoot along the trail looking into the mist. A figure (your partner) mid-trail at 30–40m gives scale and depth.",
+      text: "If there's cloud in the forest (very likely in March), shoot along the trail looking into the mist. A figure mid-trail at 30–40m gives scale and depth.",
     },
     {
       label: "Dwarf bamboo transition",
@@ -829,8 +829,8 @@ export const seg5CameraCard: InfoCard = {
       text: "70–200mm telephoto compression with the grassy foreground and summit ridge behind. Extraordinary scale.",
     },
     {
-      label: "Your partner in the landscape",
-      text: "At this scale, a human figure gives the grassland its true size. Shoot them walking away from you toward the summit.",
+      label: "Figure in the landscape",
+      text: "At this scale, a human figure gives the grassland its true size. Shoot someone walking away from you toward the summit.",
     },
     {
       label: "Wind-bent bamboo",
@@ -905,7 +905,7 @@ export const seg6CameraCard: InfoCard = {
     },
     {
       label: "Sunset (optional, ~4:30–5:00 PM)",
-      text: "If you stay, position yourself on the western edge of the summit. Silhouette of your partner against the sunset sky on the summit is the hero shot of the trip.",
+      text: "If you stay, position yourself on the western edge of the summit. A silhouette against the sunset sky on the summit is the hero shot of the trip.",
     },
   ],
 };
@@ -993,7 +993,7 @@ export const camp2CameraCard: InfoCard = {
     },
     {
       label: "Foreground",
-      text: "Tents with headlamp glow inside, summit silhouette, or your partner standing with a headlamp pointed up",
+      text: "Tents with headlamp glow inside, summit silhouette, or a trekker standing with a headlamp pointed up",
     },
     {
       label: "Swap in a warm battery right before shooting",
@@ -1066,8 +1066,8 @@ export const preDawnCameraCard: InfoCard = {
       text: "When the sun hits the clouds below the summit, they light up gold and pink from above. This is the iconic shot. Shoot wide (28mm) to capture the full scale, then zoom in (200mm) to isolate cloud textures.",
     },
     {
-      label: "Your partner silhouette against the sunrise",
-      text: "Position them on the edge of the summit ridge backlit by the rising sun. Classic, earned, powerful image.",
+      label: "Silhouette against the sunrise",
+      text: "Position someone on the edge of the summit ridge backlit by the rising sun. Classic, earned, powerful image.",
     },
     {
       label: "Shoot in bursts",

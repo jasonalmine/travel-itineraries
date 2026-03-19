@@ -22,7 +22,6 @@ import {
   meetingPoints,
   day3Timeline,
   day4Timeline,
-  baguioToManilaSchedule,
   day5Timeline,
   makatAccomDetails,
   returnFlightDetails,
@@ -33,9 +32,8 @@ import {
   gearDays,
   packingDays,
   contacts,
-  baguioAccomOptions,
+  baguioAccomDetails,
   type GearDayData,
-  type BaguioAccomOption,
 } from "@/data/pulag-travel";
 import styles from "./page.module.css";
 
@@ -135,45 +133,6 @@ function GearDaySection({ day }: { day: GearDayData }) {
   );
 }
 
-function BaguioAccomCard({
-  label,
-  name,
-  options,
-}: {
-  label: string;
-  name: string;
-  options: BaguioAccomOption[];
-}) {
-  return (
-    <div className={styles.accomCard}>
-      <span className={styles.accomLocation}>{label}</span>
-      <div className={styles.accomName}>{name}</div>
-      <DataTable>
-        <table className={styles.table} style={{ fontSize: "0.85rem" }}>
-          <thead>
-            <tr>
-              <th>Option</th>
-              <th>Area</th>
-              <th>Approx. Rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            {options.map((opt, i) => (
-              <tr key={i} className={opt.recommended ? styles.busRecommended : ""}>
-                <td>
-                  <strong>{opt.name}</strong>
-                  {opt.recommended && " 🌟"}
-                </td>
-                <td>{opt.area}</td>
-                <td>{opt.range}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </DataTable>
-    </div>
-  );
-}
 
 // ============================================================
 // Page
@@ -400,7 +359,7 @@ export default function PulagTravelPage() {
             <Callout
               variant="success"
               icon="🏆"
-              title="Best Option: 9:30 AM JoyBus Executive (₱620 × 2 = ₱1,240)"
+              title="Best Option: 9:30 AM JoyBus Executive — ₱620 per person"
             >
               ~1h 45min buffer after landing. 28 seats (2&times;1 config),
               onboard restroom, WiFi, wider legroom, water, snacks. Arrives
@@ -451,16 +410,28 @@ export default function PulagTravelPage() {
             <h4 className={`${styles.mt2} ${styles.mb1}`}>
               Where to Stay in Baguio
             </h4>
-            <BaguioAccomCard
-              label="Accommodation Needed · March 3 (1 night)"
-              name="Night Before the Hike"
-              options={baguioAccomOptions}
-            />
+            <div className={styles.accomCard}>
+              <span className={styles.accomLocation}>
+                Confirmed Accommodation · March 3 (1 night)
+              </span>
+              <div className={styles.accomName}>Cedar Peak by Awesome Stay</div>
+              <DataTable>
+                <table className={styles.table} style={{ fontSize: "0.85rem" }}>
+                  <tbody>
+                    {baguioAccomDetails.map((row, i) => (
+                      <tr key={i}>
+                        <td><strong>{row.time}</strong></td>
+                        <td>{row.activity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </DataTable>
+            </div>
             <Callout variant="warning" icon="⏰" title="Early Checkout — 4:00 AM">
-              You&rsquo;ll be up by <strong>4:00 AM</strong> to meet the Manila
-              team. Choose a hotel with <strong>24-hour reception</strong> and
-              confirm early departure is fine. Keep bags fully packed the night
-              before.
+              Departure is at <strong>4:00 AM</strong> to meet the Manila team.
+              Confirm <strong>24-hour reception</strong> is available and keep
+              bags fully packed the night before.
             </Callout>
 
             <PhaseLabel>Phase 4: Evening Preparation</PhaseLabel>
@@ -599,16 +570,29 @@ export default function PulagTravelPage() {
             <h4 className={`${styles.mt2} ${styles.mb1}`}>
               Where to Stay — Return Night
             </h4>
-            <BaguioAccomCard
-              label="Accommodation Needed · March 6 (1 night)"
-              name="Recovery Night After Pulag"
-              options={baguioAccomOptions}
-            />
-            <Callout variant="tip" icon="💡" title="Book the Same Hotel for Both Baguio Nights">
-              The simplest option is to use the same hotel for March 3 and
-              March 6. Leave your city clothes bag there while on the hike
-              &mdash; pick it up when you return on Day 4. Confirm the hotel
-              allows <strong>luggage storage</strong> during your absence.
+            <div className={styles.accomCard}>
+              <span className={styles.accomLocation}>
+                Confirmed Accommodation · March 6 (1 night)
+              </span>
+              <div className={styles.accomName}>Cedar Peak by Awesome Stay</div>
+              <DataTable>
+                <table className={styles.table} style={{ fontSize: "0.85rem" }}>
+                  <tbody>
+                    {baguioAccomDetails.map((row, i) => (
+                      <tr key={i}>
+                        <td><strong>{row.time}</strong></td>
+                        <td>{row.activity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </DataTable>
+            </div>
+            <Callout variant="tip" icon="💡" title="Same Hotel for Both Baguio Nights">
+              Cedar Peak is booked for both March 3 and March 6. Leave city
+              bags there while on the hike &mdash; pick them up on return.
+              Confirm <strong>luggage storage</strong> is available during the
+              trek days.
             </Callout>
           </DayBlock>
         </section>
@@ -619,64 +603,28 @@ export default function PulagTravelPage() {
         <section id="day5" className={styles.section}>
           <DayBlock
             day="05"
-            title="Baguio City Tour &amp; Bus to Manila"
+            title="Baguio City Tour &amp; Van to Manila"
             subtitle="March 7, Saturday"
             accent="var(--accent-trail)"
           >
             <PhaseLabel>Daytime: Baguio Exploration</PhaseLabel>
             <p className={`${styles.textSecondary} ${styles.textSm}`}>
-              Full day to enjoy Baguio before the evening bus. Burnham Park,
-              Mines View Park, The Mansion, BenCab Museum, Tam-awan Village,
-              Camp John Hay, Baguio Market, ukay-ukay shopping.
+              City tour until around 3:00 PM. Burnham Park, Mines View Park,
+              The Mansion, BenCab Museum, Tam-awan Village, Camp John Hay,
+              Baguio Market, ukay-ukay shopping.
             </p>
 
-            <PhaseLabel>Evening: Bus to Manila (Cubao)</PhaseLabel>
+            <PhaseLabel>Afternoon: Van to Manila</PhaseLabel>
             <p className={`${styles.textSecondary} ${styles.textSm}`}>
-              Departs from{" "}
-              <strong>36 Governor Pack Road</strong> (same terminal as arrival).
+              Tour organizer provides the van back to Manila. Departs ~3:30 PM,
+              arriving Makati area around 8:30–9:30 PM.
             </p>
 
-            <div className={styles.mt1}>
-              <DataTable>
-                <table className={styles.table}>
-                  <thead>
-                    <tr>
-                      <th>Departure</th>
-                      <th>Class</th>
-                      <th>Fare (each)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {baguioToManilaSchedule.map((row, i) => (
-                      <tr
-                        key={i}
-                        className={row.recommended ? styles.busRecommended : ""}
-                      >
-                        <td>{row.time}</td>
-                        <td>{row.type}</td>
-                        <td>{row.fare}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </DataTable>
-            </div>
-
-            <Callout
-              variant="success"
-              icon="🏆"
-              title="Recommended: 7:00 PM Deluxe (₱720 × 2 = ₱1,440)"
-            >
-              Full day for sightseeing. Night travel = less traffic. Arrives
-              Cubao ~12:00 midnight.{" "}
-              <strong>Book seats in advance</strong> &mdash; Saturday evening
-              buses sell out fast.
+            <Callout variant="info" icon="🚐" title="Organizer's Van — No Bus Booking Needed">
+              Transport back to Manila is arranged through the tour organizer.
+              Confirm the exact pickup point and departure time with them before
+              Day 5.
             </Callout>
-
-            <p className={`${styles.textSecondary} ${styles.textSm} ${styles.mt1}`}>
-              <strong>Drop-off:</strong> Genesis/JoyBus Cubao Terminal, EDSA
-              corner New York Avenue
-            </p>
 
             <PhaseLabel>Day 5 Timeline</PhaseLabel>
             <ItineraryTable rows={day5Timeline} />

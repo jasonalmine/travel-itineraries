@@ -85,38 +85,14 @@ export interface ContactRow {
   contact: string;
 }
 
-export interface BaguioAccomOption {
-  name: string;
-  area: string;
-  range: string;
-  notes: string;
-  recommended?: boolean;
-}
-
 // ============================================
-// BAGUIO ACCOMMODATION OPTIONS
+// BAGUIO ACCOMMODATION (CONFIRMED)
 // ============================================
 
-export const baguioAccomOptions: BaguioAccomOption[] = [
-  {
-    name: "Crown Legacy Hotel",
-    area: "Session Road, City Center",
-    range: "₱1,200–₱1,800 / night",
-    notes: "Walking distance from Gov. Pack Road terminal. Central location, good reviews.",
-    recommended: true,
-  },
-  {
-    name: "Burnham Park Hotel",
-    area: "Near Burnham Park",
-    range: "₱1,000–₱1,600 / night",
-    notes: "Overlooking Burnham Park. Quiet area, 10-min walk from Session Road.",
-  },
-  {
-    name: "Transient House / Airbnb",
-    area: "SM Baguio / Session Road area",
-    range: "₱600–₱1,000 / night",
-    notes: "Most budget-friendly for 2 pax. Search Airbnb or Baguio transient Facebook groups.",
-  },
+export const baguioAccomDetails: ItineraryRow[] = [
+  { time: "Property", activity: "Cedar Peak by Awesome Stay" },
+  { time: "Location", activity: "Baguio City" },
+  { time: "Status", activity: "Confirmed" },
 ];
 
 // ============================================
@@ -170,7 +146,7 @@ export const overviewRows: OverviewRow[] = [
   { day: "Day 2", date: "Mar 4 (Wed)", plan: "Meet Manila team ~5 AM, travel to Pulag, Akiki Trail trek to camp" },
   { day: "Day 3", date: "Mar 5 (Thu)", plan: "Trek to summit (2,922 MASL), Camp 2 overnight" },
   { day: "Day 4", date: "Mar 6 (Fri)", plan: "Descend Pulag, travel back to Baguio, rest overnight" },
-  { day: "Day 5", date: "Mar 7 (Sat)", plan: "Baguio city tour, evening bus to Manila" },
+  { day: "Day 5", date: "Mar 7 (Sat)", plan: "Baguio city tour, organizer's van back to Manila (~3 PM departure)" },
   { day: "Day 6", date: "Mar 8 (Sun)", plan: "Manila day. Stay at Makati Diamond Residences" },
   { day: "Day 7", date: "Mar 9 (Mon)", plan: "Fly MNL to CEB 1:40 PM, arrive Cebu 3:10 PM" },
 ];
@@ -293,22 +269,13 @@ export const day4Timeline: ItineraryRow[] = [
 // DAY 5 DATA
 // ============================================
 
-export const baguioToManilaSchedule: BusScheduleRow[] = [
-  { time: "5:00 PM", type: "Deluxe", fare: "₱720" },
-  { time: "6:00 PM", type: "Deluxe", fare: "₱720" },
-  { time: "7:00 PM 🌟", type: "Deluxe", fare: "₱720", recommended: true },
-  { time: "9:00 PM", type: "Premier", fare: "₱740" },
-  { time: "11:30 PM", type: "Premier", fare: "₱740" },
-];
-
 export const day5Timeline: ItineraryRow[] = [
   { time: "8:00 AM", activity: "Wake up, breakfast" },
-  { time: "9:00 AM–5:00 PM", activity: "Baguio city tour: explore, shop, eat" },
-  { time: "5:00–6:00 PM", activity: "Head to Governor Pack Road terminal" },
-  { time: "6:00–6:30 PM", activity: "Dinner near terminal" },
-  { time: "7:00 PM", activity: "🚌 Board JoyBus Deluxe to Cubao (₱720 each)" },
-  { time: "~12:00 MN", activity: "Arrive Cubao, taxi/Grab to Makati Diamond Residences" },
-  { time: "12:30–1:00 AM", activity: "Check in, sleep" },
+  { time: "9:00 AM–3:00 PM", activity: "Baguio city tour: explore, shop, eat" },
+  { time: "~3:00 PM", activity: "Tour wraps up" },
+  { time: "~3:30 PM", activity: "🚐 Board organizer's van to Manila" },
+  { time: "~8:30–9:30 PM", activity: "Arrive Manila (Makati area)" },
+  { time: "~9:30 PM", activity: "Grab/taxi to Makati Diamond Residences, check in" },
 ];
 
 // ============================================
@@ -317,9 +284,12 @@ export const day5Timeline: ItineraryRow[] = [
 
 export const makatAccomDetails: ItineraryRow[] = [
   { time: "Location", activity: "Legazpi Village, Makati City" },
-  { time: "Check-in", activity: "March 7 (Saturday) — late night, ~12:30 AM" },
-  { time: "Nights", activity: "2 nights (March 7–9)" },
-  { time: "Check-out", activity: "March 9 (Monday), before heading to NAIA" },
+  { time: "Room", activity: "41sqm Studio (Room Only)" },
+  { time: "Check-in", activity: "Saturday, 07 Mar 2026 (~9:30–10:00 PM)" },
+  { time: "Check-out", activity: "Monday, 09 Mar 2026" },
+  { time: "Nights", activity: "2 nights" },
+  { time: "Total Cost", activity: "₱15,470 (confirmed)" },
+  { time: "Booking Ref", activity: "9455" },
   { time: "Airport Access", activity: "~30–45 min to NAIA via Grab/taxi" },
 ];
 
@@ -351,13 +321,13 @@ export const day7Timeline: ItineraryRow[] = [
 
 export const budgetRows: BudgetRow[] = [
   { item: "Bus Clark → Baguio (JoyBus Executive)", cost: "₱1,240" },
-  { item: "Baguio accommodation — March 3 (1 night)", cost: "₱1,200 – ₱1,800" },
-  { item: "Baguio accommodation — March 6 (1 night)", cost: "₱1,200 – ₱1,800" },
-  { item: "Bus Baguio → Cubao (JoyBus Deluxe, March 7)", cost: "₱1,440" },
-  { item: "Makati Diamond Residences — March 7–9 (2 nights)", cost: "₱5,000 – ₱7,000" },
+  { item: "Cedar Peak by Awesome Stay — March 3 (1 night)", cost: "₱1,200 – ₱1,800" },
+  { item: "Cedar Peak by Awesome Stay — March 6 (1 night)", cost: "₱1,200 – ₱1,800" },
+  { item: "Baguio → Manila (organizer's van, March 7)", cost: "Included with tour" },
+  { item: "Makati Diamond Residences — March 7–9 (2 nights, ref: 9455)", cost: "₱15,470" },
   { item: "Taxis / Grab rides (Baguio + Manila)", cost: "₱500 – ₱1,000" },
   { item: "Meals (March 3, 7, 8, 9 — non-trek days)", cost: "₱2,000 – ₱4,000" },
-  { item: "Subtotal (excl. flights, Pulag tour fees)", cost: "~₱12,580 – ₱18,280", isTotal: true },
+  { item: "Subtotal (excl. flights, Pulag tour fees)", cost: "~₱21,610 – ₱25,310", isTotal: true },
 ];
 
 // ============================================
@@ -408,12 +378,6 @@ export const risks: RiskItem[] = [
     mitigation: "Confirm with tour organizer.",
   },
   {
-    title: "Saturday Evening Bus Sellout",
-    severity: "medium",
-    description: "March 7 is Saturday. Baguio→Manila buses are in high demand. Book early.",
-    mitigation: "Book online in advance. Buy at Gov. Pack terminal on March 3 if online isn't available.",
-  },
-  {
     title: "Missing 6:20 AM Cebu Flight",
     severity: "high",
     description: "Missing this flight means missing the entire trip.",
@@ -428,7 +392,7 @@ export const risks: RiskItem[] = [
 export const checklistItems: string[] = [
   "Get medical certificates — licensed doctor in Cebu, certifying fitness for strenuous activity",
   "Book seats: 9:30 AM March 3 Clark→Baguio bus — iwantseats.com",
-  "Book seats: 7:00 PM March 7 Baguio→Cubao bus — iwantseats.com or at terminal",
+  "Confirm van departure time and pickup point with tour organizer for March 7 return to Manila",
   "Confirm with tour organizer: DENR reservation confirmed? Camp 2 slot March 5 cleared? Pickup point March 4? What gear is provided?",
   "Ask the team: What bus from Manila? Exact meeting/pickup point in Baguio?",
   "Arrange Mactan Airport transport for 4:00 AM on March 3",
@@ -630,8 +594,8 @@ export const packingDays: GearDayData[] = [
     ],
   },
   {
-    title: "Day 5: Baguio City Tour & Bus to Manila",
-    subtitle: "Full day sightseeing, evening overnight bus (15-22°C in Baguio)",
+    title: "Day 5: Baguio City Tour & Van to Manila",
+    subtitle: "City tour until ~3 PM, then organizer's van to Manila (15-22°C in Baguio)",
     categories: [
       {
         icon: "👕",
@@ -652,8 +616,8 @@ export const packingDays: GearDayData[] = [
           { text: "Camera (Baguio has great views)" },
           { text: "Sunscreen" },
           { text: "Umbrella or rain jacket" },
-          { text: "Neck pillow + eye mask (overnight bus)" },
-          { text: "Extra layer (bus AC can be freezing)" },
+          { text: "Neck pillow + eye mask (van ride)" },
+          { text: "Light jacket (van AC)" },
         ],
       },
     ],
@@ -728,7 +692,7 @@ export const packingDays: GearDayData[] = [
           { text: "Roll clothes to save space and reduce wrinkles" },
           { text: "Wear the bulkiest items on travel days (boots, jacket)" },
           { text: "Keep trek gear separate from city clothes" },
-          { text: "Laundry in Baguio: drop off Day 4 evening, pick up Day 5 before bus" },
+          { text: "Laundry in Baguio: drop off Day 4 evening, pick up Day 5 morning" },
           { text: "Reuse the Day 1 outfit for Day 7 (it stays clean)" },
         ],
       },
