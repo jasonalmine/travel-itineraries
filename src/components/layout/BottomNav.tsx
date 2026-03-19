@@ -9,6 +9,7 @@ const tabs = [
   { href: "/pulag", icon: "🏔️", label: "Pulag" },
   { href: "/pulag/hike", icon: "🥾", label: "Hike" },
   { href: "/dinagat", icon: "🏝️", label: "Dinagat" },
+  { href: "/taiwan", icon: "🇹🇼", label: "Taiwan" },
 ];
 
 export function BottomNav() {
