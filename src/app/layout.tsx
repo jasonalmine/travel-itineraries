@@ -6,6 +6,7 @@ import "@/styles/utilities.css";
 import "@/styles/themes/pulag-alpine.css";
 import "@/styles/themes/pulag-hike.css";
 import "@/styles/themes/dinagat-tropical.css";
+import "@/styles/themes/taiwan.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
