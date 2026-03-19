@@ -32,4 +32,13 @@ export const trips: Trip[] = [
     variant: "island",
     status: "upcoming",
   },
+  ,
+  {
+    href: "/taiwan",
+    icon: "🇹🇼",
+    title: "Taiwan",
+    meta: "July 25–30, 2026 · 6 days · Taipei",
+    variant: "mountain",
+    status: "upcoming",
+  },
 ];
