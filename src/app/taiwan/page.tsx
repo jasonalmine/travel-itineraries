@@ -147,10 +147,10 @@ export default function TaiwanPage() {
           title="Taiwan"
           subtitle="Work flexibly, hike mountains, eat well, shoot everything."
           badges={[
-            { label: "July 25–30, 2026" },
-            { label: "6 Days" },
-            { label: "Taipei Base" },
-            { label: "Solo" },
+            { icon: "📅", text: "July 25–30, 2026" },
+            { icon: "✈️", text: "6 Days" },
+            { icon: "🏙️", text: "Taipei Base" },
+            { icon: "👤", text: "Solo" },
           ]}
         />
 
