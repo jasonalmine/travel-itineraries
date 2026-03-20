@@ -317,7 +317,18 @@ export default function DinagatPage() {
                   <div key={spot.num} className={styles.spotCard}>
                     <div className={styles.spotNum}>{spot.num}</div>
                     <div className={styles.spotName}>{spot.name}</div>
-                    <div className={styles.spotLocation}>{spot.location}</div>
+                    {spot.mapsUrl ? (
+                      <a
+                        href={spot.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.spotLocationLink}
+                      >
+                        {spot.location} 🗺️
+                      </a>
+                    ) : (
+                      <div className={styles.spotLocation}>{spot.location}</div>
+                    )}
                     <p className={styles.spotDesc}>{spot.description}</p>
                     {spot.tip && <p className={styles.spotTip}>{spot.tip}</p>}
                   </div>
