@@ -673,3 +673,18 @@
 .centerHeader {
   text-align: center;
 }
+
+/* ---- Spot Location Map Link ---- */
+.spotLocationLink {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent-turquoise);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.15s;
+}
+
+.spotLocationLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
