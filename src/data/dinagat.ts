@@ -51,6 +51,7 @@ export interface TouristSpot {
   num: string;
   name: string;
   location: string;
+  mapsUrl?: string;
   description: string;
   tip?: string;
 }
@@ -292,11 +293,11 @@ export const accommodationSections: AccommodationSection[] = [
         name: "Island View Suites",
         badges: [
           { text: "WiFi", variant: "turquoise" },
-          { text: "TOP PICK", variant: "palm" },
+          { text: "✅ BOOKED", variant: "palm" },
         ],
         rate: "₱1,000–1,500/night",
         highlights:
-          "Confirmed WiFi, sea views, AC, 8 rooms across 4 floors. Best option for remote workers.",
+          "Booked and confirmed. Sea views, AC, 8 rooms across 4 floors. Confirmed WiFi. Best option for remote workers.",
       },
       {
         name: "Camagong Suites",
@@ -362,6 +363,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "01",
         name: "Pangabangan Blue Lagoon",
+        mapsUrl: "https://maps.google.com/?q=10.4280,125.5680",
         location: "📍 Pangabangan Island, Libjo",
         description:
           "The crown jewel. A shallow tidal pool of impossibly turquoise water framed by limestone cliffs and mangroves. A subterranean hole creates a deep blue-green gradient. Swimming, kayaking, bamboo raft rides. Entrance: ₱20.",
@@ -370,6 +372,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "02",
         name: "Lake Bababu & Bababu Beach",
+        mapsUrl: "https://maps.google.com/?q=10.0742,125.5091",
         location: "📍 Basilisa (~30–45 min trek from BEAP)",
         description:
           "One of the few meromictic lakes in the Philippines — freshwater floats above saltwater, never mixing. Connected to the sea by a 650-meter underwater cave, the longest in the Philippines. Make a wish (local tradition).",
@@ -378,6 +381,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "03",
         name: "Hagakhak Rock Formation",
+        mapsUrl: "https://maps.google.com/?q=Hagakhak+Rock+Formation+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Off the coast of Basilisa",
         description:
           "Nature's Cathedral. Colossal sedimentary rock formations carved by ocean waves over thousands of years. Jagged limestone cliffs rise dramatically from the sea. Viewing from boat only — no swimming due to strong currents.",
@@ -386,6 +390,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "04",
         name: "Miracle Pool",
+        mapsUrl: "https://maps.google.com/?q=Miracle+Pool+Pangabangan+Island+Libjo+Dinagat+Islands+Philippines",
         location: "📍 Pangabangan Island, Libjo",
         description:
           "The Underground Oasis. A subterranean cave pool with crystal-clear freshwater, sparkling with natural calcite deposits. Cool, dimly lit, and utterly surreal. Life vest rental: ₱50.",
@@ -394,6 +399,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "05",
         name: "Mt. Redondo Natural Bonsai Forest",
+        mapsUrl: "https://maps.google.com/?q=Mt+Redondo+Bonsai+Forest+Loreto+Dinagat+Islands+Philippines",
         location: "📍 Loreto (highest mountain in the province)",
         description:
           "A 200+ hectare forest of naturally miniature trees — magkuno, lauan, pine, pitcher plants — shaped by wind and weather. Fully-grown trees reach a maximum height of 4 feet. Home to the critically endangered Dinagat Cloud Rat.",
@@ -409,6 +415,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "06",
         name: "Bitaog Beach",
+        mapsUrl: "https://maps.google.com/?q=Bitaog+Beach+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Basilisa",
         description:
           "Fine white sand, turquoise water, limestone formations — rivals Palawan. Best spot for snorkeling and underwater photography.",
@@ -416,6 +423,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "07",
         name: "Duyos Beach / Duyos Island",
+        mapsUrl: "https://maps.google.com/?q=Duyos+Beach+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Basilisa",
         description:
           "A shifting sandbar that rises and sinks with the tides. Drone-worthy minimalist seascape.",
@@ -423,6 +431,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "08",
         name: "Sundayo Beach",
+        mapsUrl: "https://maps.google.com/?q=Sundayo+Beach+Hagakhak+Island+Dinagat+Islands+Philippines",
         location: "📍 Hagakhak Island",
         description:
           "Long white sand beach with dramatic rock formations. Secluded and pristine. Check availability before going — occasionally closed.",
@@ -430,6 +439,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "09",
         name: "Pagkawasan Beach",
+        mapsUrl: "https://maps.google.com/?q=Pagkawasan+Beach+San+Jose+Dinagat+Islands+Philippines",
         location: "📍 Near San Jose",
         description:
           "Rustic charm, unspoilt shoreline, quiet atmosphere. A favorite for genuine island escape seekers.",
@@ -437,6 +447,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "10",
         name: "Cab-Ilan Beach",
+        mapsUrl: "https://maps.google.com/?q=Cab-Ilan+Beach+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Basilisa",
         description:
           "Creamy white sand fringed with coconut palms. Calm waters for swimming and snorkeling.",
@@ -444,6 +455,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "11",
         name: "Hinabyan Beach",
+        mapsUrl: "https://maps.google.com/?q=Hinabyan+Beach+Cagdianao+Dinagat+Islands+Philippines",
         location: "📍 Cagdianao (eastern coast)",
         description:
           "Long, quiet, powdery sand — practically untouched. True digital detox territory.",
@@ -451,6 +463,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "12",
         name: "Campintac Black Beach",
+        mapsUrl: "https://maps.google.com/?q=Campintac+Black+Beach+San+Jose+Dinagat+Islands+Philippines",
         location: "📍 Near San Jose",
         description:
           "Dark volcanic sand with WWII history — once a Japanese landing site. The contrast of black sand against turquoise water is striking at golden hour.",
@@ -458,6 +471,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "13",
         name: "Cabacongan Cove",
+        mapsUrl: "https://maps.google.com/?q=Cabacongan+Cove+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Basilisa",
         description:
           "Secluded, powdery sand, crystal-clear waters. Limestone cliffs frame the cove. Perfect for cliff-jumping shots.",
@@ -465,6 +479,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "14",
         name: "Alyssa's Hidden Beach",
+        mapsUrl: "https://maps.google.com/?q=Alyssa+Hidden+Beach+Dinagat+Islands+Philippines",
         location: "📍 Secluded (ask local guide)",
         description:
           "White sand, crystal-clear waters, coconut trees, dramatic rock formations. Perfect for romantic retreats.",
@@ -479,6 +494,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "15",
         name: "Pangabangan Island",
+        mapsUrl: "https://maps.google.com/?q=Pangabangan+Island+Libjo+Dinagat+Islands+Philippines",
         location: "📍 Northwest of Basilisa, Libjo area",
         description:
           "Houses both the Blue Lagoon and Miracle Pool. Unique tidal pool and inviting sandbar.",
@@ -486,6 +502,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "16",
         name: "Isla Aga",
+        mapsUrl: "https://maps.google.com/?q=Isla+Aga+Basilisa+Dinagat+Islands+Philippines",
         location: "📍 Northwest of Bababu, Basilisa",
         description:
           "Cluster of karst cliffs with white sand. Famous for one of the most scenic hanging bridges in the Philippines — crystal-clear water directly under your feet.",
@@ -494,6 +511,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "17",
         name: "Kisses Islet",
+        mapsUrl: "https://maps.google.com/?q=Kisses+Islet+Libjo+Dinagat+Islands+Philippines",
         location: "📍 Near Libjo",
         description:
           'Tiny, rounded twin islets rising side by side from the sea. Calm waters for a quick swim.',
@@ -502,6 +520,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "18",
         name: "Sayaw Island",
+        mapsUrl: "https://maps.google.com/?q=Sayaw+Island+Cagdianao+Dinagat+Islands+Philippines",
         location: "📍 Off Cagdianao (eastern coast)",
         description:
           "Pristine, rarely included in standard tours. True castaway retreat. Minimal infrastructure, few visitors.",
@@ -509,6 +528,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "19",
         name: "Oasis Islet",
+        mapsUrl: "https://maps.google.com/?q=Oasis+Islet+Libjo+Dinagat+Islands+Philippines",
         location: "📍 Libjo area",
         description:
           "A perfect anchoring spot to gaze at surrounding limestone islands jutting from every corner of the sea.",
@@ -523,6 +543,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "20",
         name: "PBMA Divine Master's Shrine",
+        mapsUrl: "https://maps.google.com/?q=PBMA+Divine+Masters+Shrine+San+Jose+Dinagat+Islands+Philippines",
         location: "📍 Barangay Aurelio, San Jose",
         description:
           "HQ of the Philippine Benevolent Missionaries Association, founded by Ruben Ecleo Sr. in 1965. Sprawling complex with elaborate gardens, ponds, streams, and mausoleum. Dress code required: Males: pants, shirt, closed shoes. Females: skirts, enclosed shoes, no sleeveless. Loaner pants: ₱20.",
@@ -553,6 +574,7 @@ export const spotTiers: SpotTier[] = [
       {
         num: "S1",
         name: "Tagbirayan Beach",
+        mapsUrl: "https://maps.google.com/?q=Tagbirayan+Beach+Cagdianao+Dinagat+Islands+Philippines",
         location: "📍 Barangay San Jose, Cagdianao",
         description:
           "Dinagat's only recognised surf break — an emerging destination that has already hosted competitions (\"Harok sa Tagbi\"). Professional surfers have confirmed its potential. Wave season mirrors Siargao: best from late September to March. April can still deliver on good swell days. Check Surfline or Magicseaweed 3–4 days before your trip.",
