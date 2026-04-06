@@ -32,7 +32,9 @@ export interface FerryRow {
   operatorNote?: string;
   travelTime: string;
   fare: string;
-  notes: string;
+  fromSurigao: string;
+  fromSanJose: string;
+  contact?: string;
 }
 
 export interface AccommodationRow {
@@ -194,16 +196,16 @@ export const navItems: NavItem[] = [
 // OVERVIEW
 // =============================================
 export const overviewRows: OverviewRow[] = [
-  { detail: "Travel Dates", info: "April 9–13, 2026 (Wednesday–Sunday)" },
+  { detail: "Travel Dates", info: "April 9–13, 2026 (Thursday–Monday)" },
   {
     detail: "Outbound Flight",
-    info: "CEB → Surigao, 2:15 PM – 3:15 PM",
-    badge: { text: "DG 6901", variant: "turquoise" },
+    info: "CEB → Surigao, 10:40 AM – 11:40 AM",
+    badge: { text: "DG 6897", variant: "turquoise" },
   },
   {
     detail: "Return Flight",
-    info: "Surigao → CEB, 3:35 PM – 4:25 PM",
-    badge: { text: "DG 6902", variant: "turquoise" },
+    info: "Surigao → CEB, 12:00 PM – 12:55 PM",
+    badge: { text: "DG 6898", variant: "turquoise" },
   },
   {
     detail: "Gateway",
@@ -234,30 +236,31 @@ export const overviewRows: OverviewRow[] = [
 // =============================================
 export const ferryRows: FerryRow[] = [
   {
+    operator: "Viel's Shipping Lines",
+    operatorNote: "Motorboat",
+    travelTime: "~1 hr",
+    fare: "₱200",
+    fromSurigao: "6:25 AM, 8:15 AM, 10:25 AM, 11:45 AM, 2:15 PM, 5:45 PM",
+    fromSanJose: "6:00 AM, 7:00 AM, 10:15 AM, 12:25 PM, 3:00 PM, 3:45 PM",
+    contact: "0950-709-3167",
+  },
+  {
     operator: "Montenegro Shipping",
-    operatorNote: "RORO/Fastcraft",
-    travelTime: "~2.5 hrs",
+    operatorNote: "RORO / Fastcraft",
+    travelTime: "1.5–2.5 hrs",
     fare: "₱170–255",
-    notes: "Twice daily",
+    fromSurigao: "4:30 AM, 2:00 PM",
+    fromSanJose: "10:00 AM, 5:00 PM",
+    contact: "0905-510-9046",
   },
   {
     operator: "Evaristo & Sons",
-    operatorNote: "RORO",
+    operatorNote: "RORO to Magsaysay",
     travelTime: "~1.5 hrs",
     fare: "₱150–200",
-    notes: "Early & late morning",
-  },
-  {
-    operator: "Vince Gabriel Liner",
-    travelTime: "~1 hr",
-    fare: "~₱200",
-    notes: "Early afternoon",
-  },
-  {
-    operator: "Pumpboats (Lantsa)",
-    travelTime: "1.5–2 hrs",
-    fare: "~₱200",
-    notes: "First trip ~5:30 AM",
+    fromSurigao: "Check Barkota.com",
+    fromSanJose: "Check Barkota.com",
+    contact: "barkota.com",
   },
 ];
 
@@ -266,32 +269,12 @@ export const ferryRows: FerryRow[] = [
 // =============================================
 export const accommodationSections: AccommodationSection[] = [
   {
-    location: "San Jose (Capital — Recommended Base)",
+    location: "San Jose (Capital)",
     rows: [
-      {
-        name: "Jmalls Island Tourist Inn (RedDoorz)",
-        badges: [{ text: "WiFi", variant: "turquoise" }],
-        rate: "₱800–1,200/night",
-        highlights: "Near port, popular with backpackers, free WiFi advertised",
-      },
-      {
-        name: "JK Tourist Inn",
-        rate: "₱500–800/night",
-        highlights: "Basic, clean, near town center",
-      },
-      {
-        name: "Along D Road Homestay",
-        rate: "₱1,500/night (AC, 2 pax)",
-        highlights: "Sea view, family-run, loft for groups",
-      },
-      {
-        name: "Candelaria Bed & Breakfast",
-        rate: "₱2,000/night (Standard)",
-        highlights: "Cozy, local charm",
-      },
       {
         name: "Island View Suites",
         badges: [
+          { text: "BOOKED", variant: "palm" },
           { text: "WiFi", variant: "turquoise" },
           { text: "✅ BOOKED", variant: "palm" },
         ],
@@ -654,23 +637,24 @@ export const days: DayData[] = [
   {
     id: "day1",
     dayNum: 1,
-    dateLabel: "Wednesday, April 9",
+    dateLabel: "Thursday, April 9",
     title: "Arrival & San Jose Exploration",
     theme: "Transit, check-in, cultural immersion",
     accent: "var(--accent-palm)",
     rows: [
-      { time: "12:30 PM", activity: "🛫 Arrive at Mactan-Cebu International Airport", details: "Check in for DG 6901. Bring snacks for the journey." },
-      { time: "2:15 PM", activity: "🛫 Depart CEB → Surigao", details: "Flight DG 6901 (1 hour)" },
-      { time: "3:15 PM", activity: "🛬 Arrive Surigao Airport", details: "Collect luggage" },
-      { time: "3:30 PM", activity: "🚐 Tricycle to Surigao Port (Pantalan Dos)", details: "₱30–50, ~20 min. Walk past the airport touts." },
-      { time: "3:50 PM", activity: "🎫 Buy ferry ticket", details: "Head to Pantalan Dos. Check which line has the next departure." },
-      { time: "4:00–5:30 PM", activity: "🚢 Ferry to San Jose, Dinagat Islands", details: "~1–1.5 hours depending on vessel. Enjoy coastline views — coconut-fringed beaches and the silhouette of Islander's Castle." },
-      { time: "5:30 PM", activity: "🏨 Arrive San Jose Port", details: "Meet pre-arranged guide/transport. Check in at accommodation." },
-      { time: "6:00 PM", activity: "🧳 Check-in & freshen up", details: "Settle into your room. Charge devices — power can be inconsistent." },
+      { time: "8:40 AM", activity: "🛫 Arrive at Mactan-Cebu International Airport", details: "Check in for DG 6897. Bring snacks for the journey." },
+      { time: "10:40 AM", activity: "🛫 Depart CEB → Surigao", details: "Flight DG 6897 (1 hour)" },
+      { time: "11:40 AM", activity: "🛬 Arrive Surigao Airport", details: "Collect luggage, head to the port." },
+      { time: "12:00 PM", activity: "🚐 Tricycle to Surigao Port", details: "₱30–50, ~20 min to Pantalan Dos. Walk past the airport touts." },
+      { time: "12:20 PM", activity: "🎫 Buy ferry ticket + grab lunch", details: "Buy ticket for Viel's 2:15 PM departure, then eat at a nearby carinderia while waiting. Montenegro's 2:00 PM RORO is also an option (slower, ₱170)." },
+      { time: "2:15 PM", activity: "🚢 Ferry to San Jose, Dinagat Islands", details: "Viel's Shipping, ~1 hour. Enjoy coastline views, coconut-fringed beaches and the silhouette of Islander's Castle." },
+      { time: "3:15 PM", activity: "🏨 Arrive San Jose Port", details: "Meet pre-arranged guide/transport. Check in at Island View Suites." },
+      { time: "3:45 PM", activity: "🧳 Check-in & freshen up", details: "Settle into your room. Charge devices, power can be inconsistent." },
+      { time: "4:15 PM", activity: "🚶 Explore San Jose town", details: "Walk around the town center, visit the church, interact with locals." },
+      { time: "5:00 PM", activity: "📋 Coordinate with guide for Day 2", details: "Confirm island-hopping itinerary, boat rental, departure time. Contact: Kuya Alon (09076102770) or Azonta Travel & Tours or Yaco Travel and Tours (Saira)." },
       { time: "6:30 PM", activity: "🌅 Sunset walk to San Jose waterfront", details: "Houses on stilts, fishing boats, salty sea breeze." },
       { time: "7:00 PM", activity: "🍽️ Dinner at local carinderia", details: "Try grilled fish, kinilaw (ceviche), sinugba. Budget: ₱80–150/meal." },
-      { time: "8:00 PM", activity: "📋 Coordinate with guide for Day 2", details: "Confirm island-hopping itinerary, boat rental, departure time. Contact: Kuya Alon (09076102770) or Azonta Travel & Tours or Yaco Travel and Tours (Saira)." },
-      { time: "9:00 PM", activity: "🌙 Rest", details: "Early night — big day tomorrow." },
+      { time: "9:00 PM", activity: "🌙 Rest", details: "Early night, big day tomorrow." },
     ],
     callout: {
       variant: "warning",
@@ -682,7 +666,7 @@ export const days: DayData[] = [
   {
     id: "day2",
     dayNum: 2,
-    dateLabel: "Thursday, April 10",
+    dateLabel: "Friday, April 10",
     title: "Libjo Loop: Island Hopping Day 1",
     theme: "Blue Lagoon, Miracle Pool, dramatic rock formations",
     accent: "var(--accent-lagoon)",
@@ -717,7 +701,7 @@ export const days: DayData[] = [
   {
     id: "day3",
     dayNum: 3,
-    dateLabel: "Friday, April 11",
+    dateLabel: "Saturday, April 11",
     title: "Basilisa Circuit: Island Hopping Day 2",
     theme: "Lake Bababu, pristine beaches, cliff coves",
     accent: "var(--accent-sand)",
@@ -754,7 +738,7 @@ export const days: DayData[] = [
   {
     id: "day4",
     dayNum: 4,
-    dateLabel: "Saturday, April 12",
+    dateLabel: "Sunday, April 12",
     title: "Mountain Trek + Hidden Gems",
     theme: "Bonsai forest, waterfalls, Cagdianao coast, cultural immersion",
     accent: "var(--accent-sunset)",
@@ -775,7 +759,7 @@ export const days: DayData[] = [
       { time: "6:00 PM", activity: "🌅 Final sunset in Dinagat", details: "From the waterfront or Pulang Yuta viewpoint (red-earth elevated spot in Brgy. Cuarinta)." },
       { time: "6:30 PM", activity: "🍽️ Farewell dinner", details: "Your best dinner yet. Consider asking your host family to prepare a special seafood meal." },
       { time: "8:00 PM", activity: "📷 Photo review & backup", details: "Review all photos from the trip. Backup to external storage." },
-      { time: "9:00 PM", activity: "🧳 Pack for departure", details: "Organize gear for tomorrow's early exit." },
+      { time: "9:00 PM", activity: "🧳 Pack for departure", details: "Pack everything tonight. Tomorrow is a 4:30 AM wake-up to catch the early ferry for your noon flight." },
     ],
     callout: {
       variant: "warning",
@@ -787,24 +771,21 @@ export const days: DayData[] = [
   {
     id: "day5",
     dayNum: 5,
-    dateLabel: "Sunday, April 13",
+    dateLabel: "Monday, April 13",
     title: "Departure",
     theme: "Final morning, transit back to Cebu",
     accent: "var(--accent-coral)",
     rows: [
-      { time: "5:00 AM", activity: "⏰ Wake up", details: "Final morning in paradise." },
-      { time: "5:30 AM", activity: "🌅 Sunrise at waterfront", details: "Last chance for golden-hour photography. The San Jose port area with fishing boats at dawn is atmospheric." },
-      { time: "6:00 AM", activity: "🍳 Breakfast", details: "" },
-      { time: "6:30 AM", activity: "🧳 Check out", details: "Say goodbye to your hosts." },
-      { time: "7:00 AM", activity: "🚢 Early ferry San Jose → Surigao City", details: "Take the 7:00 AM or earliest available ferry. Travel time: 1–1.5 hours." },
-      { time: "8:30 AM", activity: "🏙️ Arrive Surigao City", details: "" },
-      { time: "9:00 AM", activity: "☕ Coffee & brunch in Surigao", details: "Explore Surigao City briefly. Options near the port area." },
-      { time: "10:00 AM", activity: "🛍️ Surigao City exploration", details: "Visit local market for dried fish, calamansi products, native delicacies as pasalubong." },
-      { time: "12:00 PM", activity: "🍽️ Lunch in Surigao", details: "" },
-      { time: "1:00 PM", activity: "🚐 Head to Surigao Airport", details: "Tricycle/van, ~20 min. Be at airport by 1:30 PM for the 3:35 PM flight." },
-      { time: "1:30 PM", activity: "🛫 Check in at Surigao Airport", details: "" },
-      { time: "3:35 PM", activity: "🛫 Depart Surigao → Cebu", details: "Flight DG 6902 (~50 min)" },
-      { time: "4:25 PM", activity: "🛬 Arrive Mactan-Cebu International Airport", details: "Welcome back home!" },
+      { time: "4:30 AM", activity: "⏰ Wake up", details: "Early start. Your flight won't wait." },
+      { time: "5:00 AM", activity: "🍳 Breakfast & check out", details: "Say goodbye to your hosts. Bags should be fully packed from last night." },
+      { time: "5:45 AM", activity: "🚶 Head to San Jose Port", details: "Be at the port before the 6:00 AM departure." },
+      { time: "6:00 AM", activity: "🚢 Ferry San Jose → Surigao City", details: "Viel's Shipping 6:00 AM trip (~1 hour). Backup: 7:00 AM trip if you miss it, but don't risk it." },
+      { time: "7:00 AM", activity: "🏙️ Arrive Surigao City", details: "Even with a 30-min ferry delay, you arrive by 7:30 AM. Plenty of buffer." },
+      { time: "7:30 AM", activity: "☕ Breakfast & pasalubong run", details: "Visit local market for dried fish, calamansi products, native delicacies." },
+      { time: "9:00 AM", activity: "🚐 Head to Surigao Airport", details: "Tricycle/van, ~20 min. Aim to be at the airport by 9:30 AM." },
+      { time: "9:30 AM", activity: "🛫 Check in at Surigao Airport", details: "Relax at the terminal. Better to wait at the airport than rush from the port." },
+      { time: "12:00 PM", activity: "🛫 Depart Surigao → Cebu", details: "Flight DG 6898 (~55 min)" },
+      { time: "12:55 PM", activity: "🛬 Arrive Mactan-Cebu International Airport", details: "Welcome back home!" },
     ],
   },
 ];
@@ -837,9 +818,9 @@ export const cameraSettings: CameraSettingItem[] = [
 // BUDGET
 // =============================================
 export const budgetRows: BudgetRow[] = [
-  { item: "Flights (CEB-SUG roundtrip)", cost: "Already booked", notes: "DG 6901 / DG 6902" },
+  { item: "Flights (CEB-SUG roundtrip)", cost: "Already booked", notes: "DG 6897 / DG 6898" },
   { item: "Ferry (Surigao-Dinagat roundtrip)", cost: "₱400–500", notes: "Includes terminal fees" },
-  { item: "Accommodation (4 nights)", cost: "₱3,000–6,000", notes: "Depending on choice" },
+  { item: "Accommodation (4 nights)", cost: "₱4,000–6,000", notes: "Island View Suites" },
   { item: "Island hopping Day 1 (Libjo Loop)", cost: "₱3,000–3,500", notes: "Split among group" },
   { item: "Island hopping Day 2 (Basilisa)", cost: "₱3,000–3,500", notes: "Split among group" },
   { item: "Day 4 transport (habal-habal)", cost: "₱1,000–1,500", notes: "Full day charter" },
@@ -946,7 +927,7 @@ export const connectivityRows: ConnectivityRow[] = [
 export const tips: string[] = [
   "Cash is king. ATMs are almost nonexistent. Digital payments are rarely accepted. Bring more than you think you'll need.",
   "Book your guide and boat in advance. Contact local tour operators before arrival: Kuya Alon (09076102770), Azonta Travel & Tours (San Jose based), Yaco Travel and Tours (Saira) — local, personalized, and Jmalls Island Tourist Inn — offers package tours.",
-  "Ferry schedules change. Always confirm the day before. Weather can cancel trips. Have a backup plan.",
+  "Ferry schedules change without notice. Call Viel's (0950-709-3167) or Montenegro (0905-510-9046) the day before to confirm. Weather can cancel trips. Check escapemanila.com/surigao-city-to-dinagat-islands-boat-schedule for updates.",
   "Respect the PBMA Shrine dress code. Pants/shirt for males, skirt/closed shoes for females. No sleeveless tops.",
   "Don't get scammed at the port. Avoid tricycle drivers immediately outside Surigao Port and San Jose Port. Walk a block away to get fair fares.",
   "Mobile signal is unreliable. Download offline maps before you go. Smart/TNT network has slightly better coverage than Globe.",
@@ -962,7 +943,7 @@ export const tips: string[] = [
 // =============================================
 export const circuits: CircuitData[] = [
   {
-    dayLabel: "Day 2 — Thursday, April 10",
+    dayLabel: "Day 2 — Friday, April 10",
     dayColorClass: "circuit-day2",
     title: "Libjo Loop",
     stops: [
@@ -978,7 +959,7 @@ export const circuits: CircuitData[] = [
     ],
   },
   {
-    dayLabel: "Day 3 — Friday, April 11",
+    dayLabel: "Day 3 — Saturday, April 11",
     dayColorClass: "circuit-day3",
     title: "Basilisa Circuit",
     stops: [
@@ -996,7 +977,7 @@ export const circuits: CircuitData[] = [
     ],
   },
   {
-    dayLabel: "Day 4 — Saturday, April 12",
+    dayLabel: "Day 4 — Sunday, April 12",
     dayColorClass: "circuit-day4",
     title: "Mountain & East Coast",
     stops: [
@@ -1019,12 +1000,19 @@ export const contactRows: ContactRow[] = [
   { contact: "Tour Guide — Kuya Alon", details: "09076102770", isMono: true },
   { contact: "Azonta Travel & Tours", details: "San Jose, Dinagat Islands" },
   { contact: "Yaco Travel and Tours (Saira)", details: "Local operator, personalized experiences" },
+  { contact: "Viel's Shipping Lines", details: "0950-709-3167", isMono: true },
+  { contact: "Montenegro Shipping Lines", details: "0905-510-9046 / 0939-303-1532", isMono: true },
   {
     contact: "Evaristo & Sons Sea Transport",
     details: "booking.barkota.com",
     isLink: true,
     href: "https://booking.barkota.com",
   },
-  { contact: "Montenegro Shipping Lines", details: "Check at Surigao Port (Pantalan Dos)" },
   { contact: "Philippine Coast Guard — Surigao", details: "For sea condition updates before departures" },
+  {
+    contact: "Ferry Schedules (Escape Manila)",
+    details: "escapemanila.com",
+    isLink: true,
+    href: "https://www.escapemanila.com/surigao-city-to-dinagat-islands-boat-schedule/",
+  },
 ];

@@ -171,8 +171,8 @@ export default function DinagatPage() {
                 🛫 Cebu → Surigao Airport
               </h4>
               <p className="text-secondary" style={{ fontSize: "0.88rem" }}>
-                Flight <strong>DG 6901</strong> departs CEB at 2:15 PM and lands at Surigao Airport at approximately{" "}
-                <strong>3:15 PM</strong>.
+                Flight <strong>DG 6897</strong> departs CEB at 10:40 AM and lands at Surigao Airport at approximately{" "}
+                <strong>11:40 AM</strong>.
               </p>
             </Card>
             <Card>
@@ -199,9 +199,10 @@ export default function DinagatPage() {
               <thead>
                 <tr>
                   <th>Operator</th>
-                  <th>Travel Time</th>
+                  <th>Time</th>
                   <th>Fare</th>
-                  <th>Notes</th>
+                  <th>From Surigao</th>
+                  <th>From San Jose</th>
                 </tr>
               </thead>
               <tbody>
@@ -214,10 +215,16 @@ export default function DinagatPage() {
                           ({row.operatorNote})
                         </span>
                       )}
+                      {row.contact && (
+                        <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                          {row.contact}
+                        </span>
+                      )}
                     </td>
                     <td>{row.travelTime}</td>
                     <td><span className={styles.monoCell}>{row.fare}</span></td>
-                    <td>{row.notes}</td>
+                    <td style={{ fontSize: "0.82rem" }}>{row.fromSurigao}</td>
+                    <td style={{ fontSize: "0.82rem" }}>{row.fromSanJose}</td>
                   </tr>
                 ))}
               </tbody>
@@ -226,14 +233,15 @@ export default function DinagatPage() {
 
           <div className={styles.twoCol}>
             <Callout variant="warning" icon="🚨" title="Important">
-              Terminal fee: ₱10. Aim for morning departures. Afternoon sailings are fewer. Last trip back to Surigao is
-              typically around 2:00–3:00 PM.
+              Terminal fee: ₱10. Schedules change without notice. Always confirm the day before departure. Last Viel&apos;s
+              trip from San Jose is 3:45 PM, last Montenegro is 5:00 PM.
             </Callout>
-            <Callout variant="tip" icon="🌐" title="Book Online">
+            <Callout variant="tip" icon="🌐" title="Contacts">
+              Viel&apos;s: <strong>0950-709-3167</strong> &middot; Montenegro: <strong>0905-510-9046</strong> &middot;
+              Evaristo via{" "}
               <a href="https://booking.barkota.com" target="_blank" rel="noopener noreferrer">
-                Barkota
-              </a>{" "}
-              for Evaristo &amp; Sons reservations.
+                Barkota.com
+              </a>
             </Callout>
           </div>
 
@@ -252,51 +260,27 @@ export default function DinagatPage() {
             WHERE TO STAY
             ========================================= */}
         <section id="stay">
-          <SectionHeader icon="🏨" label="Accommodation" title="Where to Stay" />
+          <SectionHeader icon="🏨" label="Accommodation" title="Where We&apos;re Staying" />
 
           {accommodationSections.map((section) => (
             <div key={section.location}>
-              <span className={styles.accomLocation}>{section.location}</span>
-              <DataTable>
-                <table className={`${styles.table} ${styles.mb3}`}>
-                  <thead>
-                    <tr>
-                      <th>Accommodation</th>
-                      <th>Rate (est.)</th>
-                      <th>Highlights</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {section.rows.map((row, i) => (
-                      <tr key={i}>
-                        <td>
-                          {row.name}
-                          {row.badges?.map((b, j) => (
-                            <BadgeVariant key={j} variant={b.variant} text={b.text} />
-                          ))}
-                        </td>
-                        <td><span className={styles.monoCell}>{row.rate}</span></td>
-                        <td>{row.highlights}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </DataTable>
+              {section.rows.map((row, i) => (
+                <Card key={i}>
+                  <div className={styles.accomConfirmed}>
+                    <h3 className={styles.accomName}>
+                      {row.name}
+                      {row.badges?.map((b, j) => (
+                        <BadgeVariant key={j} variant={b.variant} text={b.text} />
+                      ))}
+                    </h3>
+                    <p className={styles.accomLocation}>{section.location}</p>
+                    <p className={styles.accomRate}>{row.rate} &middot; 4 nights</p>
+                    <p className={styles.accomHighlights}>{row.highlights}</p>
+                  </div>
+                </Card>
+              ))}
             </div>
           ))}
-
-          <Callout variant="tip" icon="💡" title="Pro Tip">
-            Book accommodations in advance — options are limited. A 2D1N package tour (₱3,000–3,500/person) from
-            operators like <strong>Azonta Travel &amp; Tours</strong> or <strong>Jmalls</strong> includes accommodation,
-            meals, boat tours, guide, and entrance fees.
-          </Callout>
-
-          <Callout variant="success" icon="🏆" title="Recommended for Our Group of 6">
-            <strong>Island View Suites</strong> in San Jose is the best fit. It has confirmed working WiFi
-            (guest-verified), air-conditioned rooms, sea views, and only 8 rooms across 4 floors, so the group can book
-            most of the property. Central waterfront location, breakfast included. Some crew members can work remotely at
-            night using the WiFi. Book directly or via Booking.com/Airbnb.
-          </Callout>
         </section>
 
         {/* =========================================
